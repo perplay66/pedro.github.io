@@ -5,6 +5,17 @@ body {
     padding: 0;
     background-color: #f0f0f0;
 }
+/* Estiliza o cabeçalho com layout flexível, 
+   alinhando o h1 à esquerda e o nav à direita */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
 /* Posiciona a navegação no canto superior direito */
 nav {
     position: absolute;
