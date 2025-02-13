@@ -1,32 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById("contactForm");
 
-    form.addEventListener('submit', function(event) {
+    contactForm.addEventListener("submit", function(event) {
         event.preventDefault();
+        
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (validateForm(name, email, message)) {
-            alert('Formulário enviado com sucesso!');
-            form.reset();
-        }
+        const displayArea = document.createElement("div");
+        displayArea.innerHTML = `
+            <h2>Informações Digitadas:</h2>
+            <p><strong>Nome:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Mensagem:</strong> ${message}</p>
+        `;
+        
+        document.body.appendChild(displayArea);
     });
-
-    function validateForm(name, email, message) {
-        if (name.trim() === '') {
-            alert('Por favor, insira seu nome.');
-            return false;
-        }
-        if (email.trim() === '') {
-            alert('Por favor, insira um endereço de e-mail válido.');
-            return false;
-        }
-        if (message.trim() === '') {
-            alert('Por favor, insira uma mensagem.');
-            return false;
-        }
-        return true;
-    }
 });
