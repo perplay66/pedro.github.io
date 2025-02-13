@@ -5,7 +5,27 @@ body {
     padding: 0;
     background-color: #f0f0f0;
 }
+/* Posiciona a navegação no canto superior direito */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
+/* Define o estilo dos links de navegação */
+nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Adiciona um estilo ao passar o mouse sobre os links de navegação */
+nav a:hover {
+    background-color: #ddd;
+    color: firebrick;
+}
 #game-container {
     margin-top: 50px;
     padding: 30px;
